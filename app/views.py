@@ -40,3 +40,9 @@ def push_marks(request):
         return JsonResponse({'status': 1}, safe=False)
     else:
         return JsonResponse({'status': 0}, safe=False)
+
+def get_marks(request):
+    request = json.loads(request.body)
+
+    get_marks_from_sql(request)
+    return JsonResponse({'status': 0}, safe=False)
