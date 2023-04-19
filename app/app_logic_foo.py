@@ -27,9 +27,9 @@ def post_marks_to_sql(rq):
     date1 = int(rq['date1'])
     marks_action = int(rq['action'])
     vector_comp = str(rq['comp']).lower()
-    frec = str(rq['frec']).lower()
+    freq = str(rq['freq']).lower()
 
-    if frec == 'min':
+    if freq == 'min':
         tick = 60
         table_name = os.getenv('SQL_TABLE_MIN')
     else:
@@ -59,7 +59,7 @@ def post_marks_to_sql(rq):
 
             # если это первая запись
             if sql_bad is None:
-                if frec == 'min':
+                if freq == 'min':
                     bad_array = np.zeros(60).astype(int)
                 else:
                     bad_array = np.zeros(3600).astype(int)

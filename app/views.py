@@ -23,15 +23,13 @@ def index(request):
 def push_marks(request):
     """
     {
-    "obs":"IRT",
-    "time_from": 1674210978,
-    "time_to": 1674211080,
-    "v1_spa":0, "v1_spm": 0, "v1_jpa":0, "v1_jpm":0,
-    "v2_spa":0, "v2_spm":0, "v2_jpa":0, "v2_jpm":0,
-    "v3_spa":0, "v3_spm":0, "v3_jpa":0, "v3_jpm":0,
-    "f_spa":0, "f_spm":0, "f_jpa":0, "f_jpm":0
-
-}
+    "code":"KLI",
+    "date0":1659330000,
+    "date1":1659333600,
+    "action":0,
+    "comp":"v3",
+    "freq":"min"
+    }
     """
     request = json.loads(request.body)
     print(request)
