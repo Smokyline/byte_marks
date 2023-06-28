@@ -86,7 +86,7 @@ def post_marks_to_sql(rq):
             cur.execute(sql_upd_request, insert_tuple)
             conn.commit()
             conn.close()
-            return 0
+        return 0
     except Exception as e:
         print(e)
         return 1
